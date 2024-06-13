@@ -85,7 +85,22 @@ image = pipe(prompt, image=init_image).images[0]
 ```
 
 ## LoRA
-Refer to [here](https://github.com/huggingface/diffusers/blob/main/examples/dreambooth/README_sd3.md) for details.
+```python
+import torch
+from diffusers import StableDiffusion3Pipeline
+
+pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.float16).to("cuda")
+
+pipe.load_lora_weights("nerijs/pixel-art-medium-128-v0.1", weight_name="pixel-art-medium-128-v0.1.safetensors")
+
+image = pipe(
+    "A cat, pixel art style",
+    negative_prompt="",
+    num_inference_steps=28,
+    guidance_scale=5.0,
+).images[0]
+```
+Refer to [here](https://github.com/huggingface/diffusers/blob/main/examples/dreambooth/README_sd3.md) for training details.
 
 ## Acknowledgement
 Thanks to the Stability AI team for making Stable Diffusion 3 happen and [HuggingFace Team](https://huggingface.co/blog/sd3).
