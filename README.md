@@ -43,6 +43,7 @@ pipe = pipe.to("cuda")
 
 You can also enable cpu_offload to further resuce memory consumption,
 ```python
+# less than 8GB VRAM
 pipe.enable_sequential_cpu_offload()
 ```
 
