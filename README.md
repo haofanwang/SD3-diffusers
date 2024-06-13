@@ -2,7 +2,7 @@
 A simple usage of Stable Diffusion 3 in diffusers.
 
 <div align="center">
-<img src='assets/image.jpg' width = 900 >
+<img src='/image.jpg' width = 900 >
 </div>
 
 ## Environment
@@ -24,7 +24,7 @@ pipe = pipe.to("cuda")
 
 # generate in 1024*1024
 image = pipe(
-    "A cat holding a sign that says hello world",
+    "A cat holding a sign that says Hello SD3",
     negative_prompt="",
     num_inference_steps=30,
     guidance_scale=7.0,
