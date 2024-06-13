@@ -102,5 +102,8 @@ image = pipe(
 ```
 Refer to [here](https://github.com/huggingface/diffusers/blob/main/examples/dreambooth/README_sd3.md) for training details.
 
+## Training
+Training script has not been provided in diffusers yet, but [SimpleTuner](https://github.com/bghira/SimpleTuner) gives it a shot.
+
 ## Acknowledgement
 Thanks to the Stability AI team for making Stable Diffusion 3 happen and [HuggingFace Team](https://huggingface.co/blog/sd3).
